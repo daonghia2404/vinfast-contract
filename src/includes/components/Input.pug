@@ -1,0 +1,5 @@
+mixin Input({ className = '', value = '', type = 'text', size = 'middle', placeholder = '', error, label })
+  .Input(class=`${className} ${size} ${error ? 'error' : ''} ${label ? 'group' : ''}`)
+    if (label)
+      .Input-label.paragraph.semibold= label
+    input(type=`${type}` placeholder=`${placeholder}` value=`${value}`).Input-control

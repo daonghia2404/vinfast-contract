@@ -1,0 +1,54 @@
+.Steps {
+  &-item {
+    position: relative;
+    text-align: center;
+    padding: 0 .8rem;
+
+    &:not(:last-child) {
+      &::before {
+        position: absolute;
+        width: 100%;
+        background: $porcelain;
+        height: 2px;
+        top: 1rem;
+        left: 50%;
+        z-index: -1;
+        content: '';
+      }
+    }
+
+
+    &.active {
+      .Steps-item {
+        &-label {
+          color: $blue-ribbon;
+
+          @media (max-width: 575px) {
+            font-size: 1.4rem;
+          }
+        }
+      }
+    }
+
+    &-circle {
+      width: 2.4rem;
+      height: 2.4rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 50%;
+      background: $black;
+      color: $white;
+      margin: 0 auto 1rem;
+    }
+
+    &-label {
+      color: $gray;
+      transition: $common-transition;
+
+      @media (max-width: 575px) {
+        font-size: 12px;
+      }
+    }
+  }
+}

@@ -1,0 +1,21 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .LoginPage 
+    .container 
+      .LoginPage-wrapper
+        .LoginPage-header 
+          h2.LoginPage-title.heading.light Đăng nhập
+          p.LoginPage-description.label.semibold Để ký hợp đồng điện tử, Quý khách vui lòng đăng nhập với tên đăng nhập và mật khẩu đã đươc VinFast gửi qua email của Quý khách.
+          a(href="#").LoginPage-link.label.semibold Xem hướng dẫn
+
+        form(action="#").LoginPage-form
+          .LoginPage-form-item
+            +Input({ placeholder: 'Tên đăng nhập' })
+          .LoginPage-form-item
+            +Input({ placeholder: 'Mật khẩu', type: 'password' })
+          .LoginPage-form-item.submit
+            +Button({ title: 'ĐĂNG NHẬP', styleType: 'primary', link: 'hop-dong.html' })
+
+        a(href="#").text-center.LoginPage-link.label.semibold Change language to English
+

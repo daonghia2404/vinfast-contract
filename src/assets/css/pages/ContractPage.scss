@@ -1,0 +1,88 @@
+.ContractPage {
+  margin-bottom: 9.6rem;
+
+  &-header {
+    text-align: center;
+    max-width: 85rem;
+    margin: 0 auto 6.4rem;
+  }
+
+  &-title {
+    color: $mine-shaft;
+    margin-bottom: .8rem;
+  }
+
+  &-description {
+    color: $mine-shaft;
+    margin-bottom: 3rem;
+  }
+
+  &-view {
+    background: $porcelain-light;
+    max-width: 85rem;
+    margin: 0 auto 4.8rem;
+
+    &-header {
+      padding: 1.2rem 3rem;
+
+      &-item {
+        color: $blue-ribbon;
+        cursor: pointer;
+        transition: $common-transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        img {
+          flex: 0 0 2.4rem;
+          max-width: 2.4rem;
+          margin-right: .4rem;
+        }
+      }
+    }
+
+    &-body {
+      overflow: auto;
+      height: 35.6rem;
+      padding: 0 1.6rem;
+
+      @media (max-width: 575px) {
+        height: 29.4rem;
+      }
+
+      &-page {
+        max-width: 61.7rem;
+        margin: 0 auto;
+        background: $white;
+        padding: 1.6rem 3.2rem;
+
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+
+        p {
+          color: $mine-shaft;
+        }
+      }
+    }
+
+    &-footer {
+      background: $porcelain;
+      padding: .4rem 3rem;
+      color: $mine-shaft;
+
+      span {
+        display: block;
+        background: $white;
+        padding: .4rem .8rem;
+        margin-left: .8rem;
+      }
+    }
+  }
+
+  &-submit {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}

@@ -1,0 +1,63 @@
+.Button {
+  &.primary {
+    .Button-control {
+      background: $blue-ribbon;
+      color: $white;
+
+      &:hover {
+        background: lighten($blue-ribbon, 10%);
+      }
+    }
+  }
+
+  &.outline-primary {
+    .Button-control {
+      background: $white;
+      color: $blue-ribbon;
+      border: 1px solid $blue-ribbon;
+
+      &:hover {
+        background: darken($white, 10%);
+      }
+    }
+  }
+
+  &.ghost {
+    .Button-control {
+      background: transparent;
+      color: $blue-ribbon;
+
+      &:hover {
+        color: darken($blue-ribbon, 10%);
+      }
+    }
+  }
+
+  &.disabled {
+    cursor: not-allowed;
+
+    .Button-control {
+      background: $gray !important;
+      color: $white;
+
+      &:hover {
+        background: $gray !important;
+      }
+    }
+  }
+
+  &-control {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: $white;
+    height: 5.2rem;
+    padding: .4rem 3.2rem;
+    width: 100%;
+    border: none;
+    outline: none;
+    border-radius: .3rem;
+    cursor: pointer;
+    user-select: none;
+    transition: $common-transition;
+  }
+}

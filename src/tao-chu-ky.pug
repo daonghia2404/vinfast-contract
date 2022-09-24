@@ -1,0 +1,31 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .SignedPage 
+    .container 
+      .SignedPage-wrapper
+        a(href="hop-dong.html").SignedPage-back.flex.items-center
+          img(src="./assets/icons/icon-angle-left.svg" alt="")
+          span.paragraph.bold HỢP ĐỒNG
+
+        .SignedPage-header 
+          h2.SignedPage-title.heading.light Tạo chữ ký điện tử
+          p.SignedPage-description.label.semibold Sử dụng màn hình cảm ứng hoặc chuột máy tính để vẽ chữ ký đại diện.
+
+        .SignedPage-view
+          .SignedPage-view-header.paragraph.semibold.text-center Tạo chữ ký tại đây
+
+          .SignedPage-view-body 
+
+          .SignedPage-view-footer.flex.items-center.justify-between 
+            .SignedPage-view-footer-item.flex.items-center 
+              img(src="./assets/icons/icon-pen.svg" alt="")
+              span.label.semibold Vẽ lại
+
+            .SignedPage-view-footer-item.flex.items-center 
+              img(src="./assets/icons/icon-upload.svg" alt="")
+              span.label.semibold Tải ảnh lên
+
+        .SignedPage-submit
+          +Button({ title: 'XÁC NHẬN', styleType: 'primary', disabled: true, link: 'dieu-khoan-su-dung.html' })
+

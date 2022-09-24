@@ -1,0 +1,33 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .ContractPage 
+    .container 
+      .ContractPage-wrapper
+        .ContractPage-header 
+          h2.ContractPage-title.heading.light Hợp đồng mua xe trả thẳng
+          p.ContractPage-description.label.semibold Quý khách vui lòng kiểm tra kỹ thông tin trên hợp đồng.
+
+        .ContractPage-view
+          .ContractPage-view-header.flex.items-center.justify-between 
+            .ContractPage-view-header-item.flex.items-center 
+              img(src="./assets/icons/icon-print.svg", alt="")
+              span.label.semibold In
+
+            .ContractPage-view-header-item.flex.items-center 
+              img(src="./assets/icons/icon-download.svg", alt="")
+              span.label.semibold Tải về
+
+          .ContractPage-view-body 
+            each item in [1,2,3,4,5]
+              .ContractPage-view-body-page 
+                p.body Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+
+          .ContractPage-view-footer.flex.items-center.justify-center.paragraph.semibold
+            |Quý khách đang xem trang
+            span.paragraph 12/32
+
+          
+        .ContractPage-submit
+          +Button({ title: 'ĐỒNG Ý KÝ', styleType: 'primary', link: 'tao-chu-ky.html' })
+

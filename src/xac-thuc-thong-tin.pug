@@ -1,0 +1,59 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .VerifyInfomationPage 
+    .container 
+      .VerifyInfomationPage-wrapper
+        a(href="dieu-khoan-su-dung.html").VerifyInfomationPage-back.flex.items-center
+          img(src="./assets/icons/icon-angle-left.svg" alt="")
+          span.paragraph.bold ĐIỀU KHOẢN
+
+        .VerifyInfomationPage-header 
+          h2.VerifyInfomationPage-title.heading.light Xác thực ký hợp đồng điện tử
+          p.VerifyInfomationPage-description.label.semibold Khách hàng: Nguyễn Văn A
+
+        +Steps({ data: dataSteps, step: 2 })
+
+        form(action="#").VerifyInfomationPage-form.flex.flex-wrap.justify-between
+          .VerifyInfomationPage-form-col
+            h3.VerifyInfomationPage-form-title.label.semibold HÌNH ẢNH MẶT TRƯỚC CCCD/CMT
+            .VerifyInfomationPage-form-item
+              .VerifyInfomationPage-form-image
+                img(src="./assets/images/image-upload.png", alt="")
+
+                .VerifyInfomationPage-form-image-controls.flex.items-center.justify-between
+                  +Button({ title: 'CHỤP ẢNH', styleType: 'outline-primary' })
+                  +Button({ title: 'HUỶ CHỤP', styleType: 'ghost' })
+
+            p.VerifyInfomationPage-form-text.label.error Hỉnh ảnh CCCD/CMT không rõ nét, không thể đọc được chữ, vui lòng chụp lại ảnh.
+
+
+          .VerifyInfomationPage-form-col
+            h3.VerifyInfomationPage-form-title.label.semibold THÔNG TIN MẶT TRƯỚC CCCD/CMT
+            .VerifyInfomationPage-form-item
+              +Input({ label: 'Số CCCD/CMT', value: '12345678910', error: true, placeholder: 'Nhập Số CCCD/CMT' })
+              p.VerifyInfomationPage-form-text.paragraph Hỉnh ảnh CCCD/CMT không rõ nét, không thể đọc được chữ, vui lòng chụp lại ảnh.
+
+            .VerifyInfomationPage-form-item
+              +Input({ label: 'Họ và tên', value: 'Nguyễn Văn A', error: true, placeholder: 'Nhập Họ và tên' })
+              p.VerifyInfomationPage-form-text.paragraph Họ và tên không khớp với thông tin ban đầu.
+
+            .VerifyInfomationPage-form-row.two-part-three
+
+              .VerifyInfomationPage-form-item
+                +Input({ label: 'Giới tính', value: 'Nam', placeholder: 'Nhập Giới tính' })
+
+              .VerifyInfomationPage-form-item
+                +Input({ label: 'Ngày sinh', value: '01/01/1991', placeholder: 'Nhập Giới tính' })
+          
+            .VerifyInfomationPage-form-item
+              +Input({ label: 'Quê quán', value: '---------', error: true, placeholder: 'Nhập Quê quán' })
+              p.VerifyInfomationPage-form-text.paragraph Không đọc được thông tin
+
+            .VerifyInfomationPage-form-item
+              +Input({ label: 'Địa chỉ thường trú', value: '---------', error: true, placeholder: 'Nhập Địa chỉ thường trú' })
+              p.VerifyInfomationPage-form-text.paragraph Không đọc được thông tin
+
+        .VerifyInfomationPage-submit
+          +Button({ title: 'BƯỚC TIẾP THEO', styleType: 'primary', disabled: true })
+

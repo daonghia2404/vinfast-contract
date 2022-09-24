@@ -1,0 +1,29 @@
+extends includes/layouts/Guest.pug
+
+block pages
+  .TermOfUsePage 
+    .container 
+      .TermOfUsePage-wrapper
+        a(href="tao-chu-ky.html").TermOfUsePage-back.flex.items-center
+          img(src="./assets/icons/icon-angle-left.svg" alt="")
+          span.paragraph.bold CHỮ KÝ
+
+        .TermOfUsePage-header 
+          h2.TermOfUsePage-title.heading.light Xác thực ký hợp đồng điện tử
+          p.TermOfUsePage-description.label.semibold Khách hàng: Nguyễn Văn A
+
+        +Steps({ data: dataSteps, step: 1 })
+
+        .TermOfUsePage-view
+          .TermOfUsePage-view-body 
+            h3.text-center.label.semibold ĐIỀU KHOẢN VÀ ĐIỀU KIỆN SỬ DỤNG EKYC
+            p.label Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            p.label Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+            p.label Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet. Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. Exercitation veniam consequat sunt nostrud amet.
+
+        .TermOfUsePage-checked.flex.justify-center 
+          +Checkbox({ label: 'Tôi đã đọc và đồng ý với Điều khoản và điều kiện sử dụng eKYC' })
+
+        .TermOfUsePage-submit
+          +Button({ title: 'XÁC NHẬN', styleType: 'primary', disabled: true, link: 'xac-thuc-thong-tin.html' })
+

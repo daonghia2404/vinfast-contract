@@ -1,0 +1,31 @@
+.Footer {
+  padding: 1.6rem;
+  background: $porcelain;
+
+  &-wrapper {
+    @media (max-width: 575px) {
+      justify-content: center;
+    }
+  }
+
+  &-logo {
+    max-width: 11rem;
+
+    @media (max-width: 575px) {
+      display: none;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &-text {
+    color: $mine-shaft;
+
+    @media (max-width: 575px) {
+      font-size: 12px;
+      text-align: center;
+    }
+  }
+}

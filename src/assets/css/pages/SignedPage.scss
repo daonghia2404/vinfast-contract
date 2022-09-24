@@ -1,0 +1,80 @@
+.SignedPage {
+  margin-bottom: 25.6rem;
+
+  &-back {
+    color: $blue-ribbon;
+    width: fit-content;
+    margin-bottom: -3.2rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      flex: 0 0 2.4rem;
+      max-width: 2.4rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &-header {
+    text-align: center;
+    max-width: 85rem;
+    margin: 0 auto 6.4rem;
+  }
+
+  &-title {
+    color: $mine-shaft;
+    margin-bottom: .8rem;
+  }
+
+  &-description {
+    color: $mine-shaft;
+    margin-bottom: 3rem;
+  }
+
+  &-view {
+    max-width: 41rem;
+    margin: 0 auto 4.8rem;
+    border: 1px solid $geyser;
+    box-shadow: $shadow-3;
+    border-radius: .4rem;
+
+    &-header {
+      background: $porcelain-light;
+      padding: .4rem 3rem;
+      color: $mine-shaft;
+    }
+
+    &-footer {
+      background: $porcelain-light;
+      padding: 1.2rem 3rem;
+
+      &-item {
+        color: $blue-ribbon;
+        cursor: pointer;
+        transition: $common-transition;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        img {
+          flex: 0 0 2.4rem;
+          max-width: 2.4rem;
+          margin-right: .4rem;
+        }
+      }
+    }
+
+    &-body {
+      overflow: auto;
+      height: 22.6rem;
+    }
+  }
+
+  &-submit {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}

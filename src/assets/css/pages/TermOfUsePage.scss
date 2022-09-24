@@ -1,0 +1,83 @@
+.TermOfUsePage {
+  margin-bottom: 25.6rem;
+
+  &-back {
+    color: $blue-ribbon;
+    width: fit-content;
+    margin-bottom: -3.2rem;
+
+    @media (max-width: 768px) {
+      margin-bottom: 3rem;
+    }
+
+    img {
+      flex: 0 0 2.4rem;
+      max-width: 2.4rem;
+      margin-right: 0.8rem;
+    }
+  }
+
+  &-header {
+    text-align: center;
+    max-width: 85rem;
+    margin: 0 auto 6.4rem;
+  }
+
+  &-title {
+    color: $mine-shaft;
+    margin-bottom: .8rem;
+  }
+
+  &-description {
+    color: $mine-shaft;
+    margin-bottom: 3rem;
+  }
+
+  .Steps {
+    max-width: 85rem;
+    margin: 0 auto 4.8rem;
+  }
+
+  &-view {
+    max-width: 85rem;
+    margin: 0 auto 3.8rem;
+
+    &-body {
+      overflow: auto;
+      padding: 3rem;
+      height: 30.7rem;
+      background: $porcelain-light;
+
+      @media (max-width: 575px) {
+        padding: 1.6rem;
+      }
+
+      h3 {
+        margin-bottom: 3rem;
+      }
+
+      p {
+        &:not(:last-child) {
+          margin-bottom: 1.6rem;
+        }
+      }
+    }
+  }
+
+  &-checked {
+    margin-bottom: 3.2rem;
+
+    .Checkbox {
+      white-space: nowrap;
+
+      @media (max-width: 768px) {
+        white-space: unset;
+      }
+    }
+  }
+
+  &-submit {
+    max-width: 30rem;
+    margin: 0 auto;
+  }
+}

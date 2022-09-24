@@ -1,0 +1,7 @@
+mixin Steps({ className = '', data = [], step })
+  .Steps(class=`${className}`).flex.items-start
+    each item, index in data
+      .Steps-item(class=`${index + 1 === step ? 'active' : ''}` style=`flex: 0 0 ${100 / data.length}%; max-width: ${100 / data.length}%;`)
+        .Steps-item-circle.label.semibold= index + 1
+        .Steps-item-label.label.semibold= item.label
+    
